@@ -32,6 +32,32 @@ Automation
 Applied AI
         ↓
 Reliable, practical software
+```
+
+I learn primarily through building production-style projects, solving
+engineering problems, studying system design, and documenting the decisions
+behind what I build.
+
+🎯 What I'm Building Toward
+
+I'm working toward becoming an engineer who can take a problem from:
+
+Problem
+   ↓
+Requirements
+   ↓
+Architecture
+   ↓
+Implementation
+   ↓
+Automation
+   ↓
+Cloud Deployment
+   ↓
+Monitoring & Reliability
+
+Rather than learning technologies in isolation, I use projects to connect them
+into complete systems.
 
 🧭 The Roadmap
 01 — Backend Engineering
@@ -90,6 +116,9 @@ AI agents
 Evaluation
 AI-powered backend services
 
+The focus is practical AI engineering, not simply calling an API and
+putting a chatbot on a webpage.
+
 🛠️ Technology Stack
 Backend
 
@@ -114,6 +143,9 @@ Python · LLM APIs · Embeddings · RAG · Vector Databases
 Engineering
 
 Git · Linux · REST APIs · System Design · Testing · Observability
+
+The stack will evolve. Tools are secondary; engineering fundamentals come
+first.
 
 🚀 Projects
 
@@ -194,3 +226,71 @@ Scheduled jobs
 Data transformation
 
 Status: 🔄 Continuously evolving
+
+📈 How I Learn
+
+I follow a simple loop:
+
+Learn
+  ↓
+Build
+  ↓
+Break
+  ↓
+Debug
+  ↓
+Understand
+  ↓
+Document
+  ↓
+Improve
+
+Every project is an opportunity to go deeper than simply making something
+"work."
+
+I document:
+
+Architecture decisions
+Trade-offs
+Problems encountered
+Solutions
+Performance considerations
+Lessons learned
+🗺️ Progress
+Area	Current Focus
+Backend	🟢 Active
+Cloud Architecture	🟢 Active
+Automation	🟢 Active
+AI / ML	🟡 Learning
+System Design	🟢 Active
+DSA	🟢 Active
+DevOps	🟢 Active
+📚 Engineering Notes
+
+This repository also contains notes and experiments covering topics such as:
+
+System design
+AWS architecture
+Database optimization
+Backend patterns
+DevOps
+AI engineering
+Algorithms & data structures
+
+The notes are intentionally practical:
+
+What is it? → Why does it matter? → How does it work? → Where would I use it?
+
+🌱 The Goal
+
+I'm not trying to know every technology.
+
+I'm trying to become the engineer who can walk into an unfamiliar problem and
+say:
+
+"Let's understand the problem first. Then we'll design the system."
+
+This repository is the evidence of that journey.
+
+⭐ If you find something useful here, feel free to explore the projects,
+experiments, and engineering notes.
