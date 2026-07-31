@@ -1,24 +1,18 @@
 # ⚡ Engineering Lab
 
-> A hands-on engineering journey focused on building reliable backend systems,
-> designing cloud infrastructure, automating real-world workflows, and
-> integrating practical AI.
+> **A hands-on engineering journey focused on building reliable backend systems, designing cloud infrastructure, automating real-world workflows, and integrating practical AI.**
 
-This repository is my **engineering laboratory** — a place where I learn by
-building, experiment with ideas, document what I discover, and turn concepts
-into working systems.
+This repository is my **engineering laboratory** — a place where I learn by building, experiment with ideas, document what I discover, and turn concepts into working systems.
 
 The goal isn't to collect technologies.
 
-The goal is to become an engineer who can **understand a problem, design the
-system, build it, deploy it, and keep it running.**
+The goal is to become an engineer who can **understand a problem, design the system, build it, deploy it, and keep it running.**
 
 ---
 
 ## 👩🏽‍💻 About Me
 
-I'm a Software Engineer with a strong interest in **backend engineering,
-cloud architecture, automation, and applied AI**.
+I'm a Software Engineer with a strong interest in **backend engineering, cloud architecture, automation, and applied AI**.
 
 My engineering journey sits at the intersection of:
 
@@ -34,14 +28,15 @@ Applied AI
 Reliable, practical software
 ```
 
-I learn primarily through building production-style projects, solving
-engineering problems, studying system design, and documenting the decisions
-behind what I build.
+I learn primarily through **building production-style projects**, solving engineering problems, studying system design, and documenting the decisions behind what I build.
 
-🎯 What I'm Building Toward
+---
+
+## 🎯 What I'm Building Toward
 
 I'm working toward becoming an engineer who can take a problem from:
 
+```text
 Problem
    ↓
 Requirements
@@ -55,182 +50,206 @@ Automation
 Cloud Deployment
    ↓
 Monitoring & Reliability
+```
 
-Rather than learning technologies in isolation, I use projects to connect them
-into complete systems.
+Rather than learning technologies in isolation, I use projects to connect them into **complete systems**.
 
-🧭 The Roadmap
-01 — Backend Engineering
+---
+
+# 🧭 Roadmap
+
+## 01 — Backend Engineering
 
 Build a strong foundation for designing and maintaining backend systems.
 
-REST APIs
-Authentication & authorization
-Database design
-Caching
-Background jobs
-Queues & event-driven systems
-Testing
-Performance
-Observability
-System design
-02 — Cloud Architecture
+* REST APIs
+* Authentication & Authorization
+* Database Design
+* Caching
+* Background Jobs
+* Queues & Event-Driven Systems
+* Testing
+* Performance
+* Observability
+* System Design
 
-Move from using cloud services to understanding how to design systems on the
-cloud.
+---
 
-AWS
-Networking
-Compute
-Storage
-Databases
-IAM
-Load balancing
-Auto scaling
-Infrastructure as Code
-CI/CD
-Monitoring
-Reliability & disaster recovery
-03 — Automation Engineering
+## 02 — Cloud Architecture
+
+Move from **using cloud services** to understanding how to **design systems on the cloud**.
+
+* AWS
+* Networking
+* Compute
+* Storage
+* Databases
+* IAM
+* Load Balancing
+* Auto Scaling
+* Infrastructure as Code
+* CI/CD
+* Monitoring
+* Reliability & Disaster Recovery
+
+---
+
+## 03 — Automation Engineering
 
 Turn repetitive manual work into reliable software.
 
-Python automation
-API integrations
-Web scraping
-Data processing
-Scheduled jobs
-File & report automation
-Workflow automation
-DevOps automation
-04 — Applied AI / ML
+* Python Automation
+* API Integrations
+* Web Scraping
+* Data Processing
+* Scheduled Jobs
+* File & Report Automation
+* Workflow Automation
+* DevOps Automation
+
+---
+
+## 04 — Applied AI / ML
 
 Learn how modern AI systems are built and integrated into real applications.
 
-Machine learning fundamentals
-Embeddings
-Vector databases
-RAG
-LLM APIs
-AI agents
-Evaluation
-AI-powered backend services
+* Machine Learning Fundamentals
+* Embeddings
+* Vector Databases
+* RAG
+* LLM APIs
+* AI Agents
+* Evaluation
+* AI-Powered Backend Services
 
-The focus is practical AI engineering, not simply calling an API and
-putting a chatbot on a webpage.
+> The focus is **practical AI engineering**, not simply calling an API and putting a chatbot on a webpage.
 
-🛠️ Technology Stack
-Backend
+---
 
-Node.js · NestJS · Express · Python · .NET
+# 🛠️ Technology Stack
 
-Databases
+### Backend
 
-PostgreSQL · MySQL · MongoDB · Redis
+`Node.js` · `NestJS` · `Express` · `Python` · `.NET`
 
-Cloud & Infrastructure
+### Databases
 
-AWS · Docker · Terraform · GitHub Actions
+`PostgreSQL` · `MySQL` · `MongoDB` · `Redis`
 
-Frontend
+### Cloud & Infrastructure
 
-React · TypeScript · Tailwind CSS
+`AWS` · `Docker` · `Terraform` · `GitHub Actions`
 
-AI / ML
+### Frontend
 
-Python · LLM APIs · Embeddings · RAG · Vector Databases
+`React` · `TypeScript` · `Tailwind CSS`
 
-Engineering
+### AI / ML
 
-Git · Linux · REST APIs · System Design · Testing · Observability
+`Python` · `LLM APIs` · `Embeddings` · `RAG` · `Vector Databases`
 
-The stack will evolve. Tools are secondary; engineering fundamentals come
-first.
+### Engineering
 
-🚀 Projects
+`Git` · `Linux` · `REST APIs` · `System Design` · `Testing` · `Observability`
+
+> **The stack will evolve. Tools are secondary; engineering fundamentals come first.**
+
+---
+
+# 🚀 Projects
 
 These aren't just portfolio projects.
 
-Each project is designed to answer a specific engineering question.
+Each project is designed to answer a **specific engineering question**.
 
-💳 Payment Reconciliation Platform
+---
 
-Backend · Cloud · Automation
+## 💳 Payment Reconciliation Platform
 
-A system designed to automate the reconciliation of payment transactions
-across multiple providers.
+**Backend · Cloud · Automation**
 
-Engineering focus
-Payment provider integrations
-Transaction matching
-Duplicate detection
-Background processing
-Failure handling
-Reporting
-Cloud deployment
-Observability
+A system designed to automate the reconciliation of payment transactions across multiple providers.
 
-Status: 🚧 In Progress
+### Engineering Focus
 
-☁️ Production Cloud Platform
+* Payment provider integrations
+* Transaction matching
+* Duplicate detection
+* Background processing
+* Failure handling
+* Reporting
+* Cloud deployment
+* Observability
 
-AWS · Terraform · Docker · CI/CD
+**Status:** 🚧 In Progress
 
-A production-style deployment environment demonstrating how a backend
-application moves from code to a reliable cloud infrastructure.
+---
 
-Engineering focus
-Infrastructure as Code
-Networking
-Deployment automation
-Load balancing
-Monitoring
-Logging
-Security
-Scalability
+## ☁️ Production Cloud Platform
 
-Status: 🔜 Planned
+**AWS · Terraform · Docker · CI/CD**
 
-🤖 AI Document Assistant
+A production-style deployment environment demonstrating how a backend application moves from code to reliable cloud infrastructure.
 
-Python · RAG · Vector Database · LLM
+### Engineering Focus
 
-An AI-powered system that allows users to upload documents and ask questions
-about their contents.
+* Infrastructure as Code
+* Networking
+* Deployment Automation
+* Load Balancing
+* Monitoring
+* Logging
+* Security
+* Scalability
 
-Engineering focus
-Document processing
-Embeddings
-Semantic search
-Retrieval-Augmented Generation
-API design
-Evaluation
-Cloud deployment
+**Status:** 🔜 Planned
 
-Status: 🔜 Planned
+---
 
-⚙️ Automation Toolkit
+## 🤖 AI Document Assistant
 
-Python · APIs · Data Processing
+**Python · RAG · Vector Database · LLM**
 
-A collection of practical automation tools designed to eliminate repetitive
-manual workflows.
+An AI-powered system that allows users to upload documents and ask questions about their contents.
 
-Examples include:
+### Engineering Focus
 
-File processing
-Excel automation
-Report generation
-API synchronization
-Scheduled jobs
-Data transformation
+* Document Processing
+* Embeddings
+* Semantic Search
+* Retrieval-Augmented Generation
+* API Design
+* Evaluation
+* Cloud Deployment
 
-Status: 🔄 Continuously evolving
+**Status:** 🔜 Planned
 
-📈 How I Learn
+---
+
+## ⚙️ Automation Toolkit
+
+**Python · APIs · Data Processing**
+
+A collection of practical automation tools designed to eliminate repetitive manual workflows.
+
+### Examples
+
+* File Processing
+* Excel Automation
+* Report Generation
+* API Synchronization
+* Scheduled Jobs
+* Data Transformation
+
+**Status:** 🔄 Continuously Evolving
+
+---
+
+# 📈 How I Learn
 
 I follow a simple loop:
 
+```text
 Learn
   ↓
 Build
@@ -244,53 +263,67 @@ Understand
 Document
   ↓
 Improve
+```
 
-Every project is an opportunity to go deeper than simply making something
-"work."
+Every project is an opportunity to go deeper than simply making something **"work."**
 
 I document:
 
-Architecture decisions
-Trade-offs
-Problems encountered
-Solutions
-Performance considerations
-Lessons learned
-🗺️ Progress
-Area	Current Focus
-Backend	🟢 Active
-Cloud Architecture	🟢 Active
-Automation	🟢 Active
-AI / ML	🟡 Learning
-System Design	🟢 Active
-DSA	🟢 Active
-DevOps	🟢 Active
-📚 Engineering Notes
+* Architecture decisions
+* Trade-offs
+* Problems encountered
+* Solutions
+* Performance considerations
+* Lessons learned
+
+---
+
+# 🗺️ Progress
+
+| Area                | Current Focus |
+| ------------------- | ------------- |
+| Backend Engineering | 🟢 Active     |
+| Cloud Architecture  | 🟢 Active     |
+| Automation          | 🟢 Active     |
+| AI / ML             | 🟡 Learning   |
+| System Design       | 🟢 Active     |
+| DSA                 | 🟢 Active     |
+| DevOps              | 🟢 Active     |
+
+---
+
+# 📚 Engineering Notes
 
 This repository also contains notes and experiments covering topics such as:
 
-System design
-AWS architecture
-Database optimization
-Backend patterns
-DevOps
-AI engineering
-Algorithms & data structures
+* System Design
+* AWS Architecture
+* Database Optimization
+* Backend Patterns
+* DevOps
+* AI Engineering
+* Algorithms & Data Structures
 
 The notes are intentionally practical:
 
-What is it? → Why does it matter? → How does it work? → Where would I use it?
+> **What is it? → Why does it matter? → How does it work? → Where would I use it?**
 
-🌱 The Goal
+---
+
+# 🌱 The Goal
 
 I'm not trying to know every technology.
 
-I'm trying to become the engineer who can walk into an unfamiliar problem and
-say:
+I'm trying to become the engineer who can walk into an unfamiliar problem and say:
 
-"Let's understand the problem first. Then we'll design the system."
+> **"Let's understand the problem first. Then we'll design the system."**
 
-This repository is the evidence of that journey.
+This repository is the **evidence of that journey**.
 
-⭐ If you find something useful here, feel free to explore the projects,
-experiments, and engineering notes.
+---
+
+## ⭐ Explore
+
+If you find something useful here, feel free to explore the projects, experiments, and engineering notes.
+
+**Learn → Build → Break → Understand → Improve.**
