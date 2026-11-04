@@ -10,6 +10,7 @@ export const RegisterSchema = z.object({
         "Password must be at least 8 characters long, contain at least one letter, one number, and one special character",
     }),
   role: z.enum(['user', 'admin',], { message: 'Role must be either user or admin' }),
+  businessRole: z.enum(['LANDLORD', 'TENANT'], { message: 'Business role must be either LANDLORD or TENANT' }).optional(),
 });
 
 export type RegisterDto = z.infer<typeof RegisterSchema>;

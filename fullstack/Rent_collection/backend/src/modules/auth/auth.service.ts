@@ -9,29 +9,29 @@ export class AuthService {
   constructor(private authRepository: AuthRepository) {}
 
   async register(dto: RegisterDto) {
-    // 1. Business rule: no duplicate emails
     const existingUser = await this.authRepository.findByPhone(dto.phone);
     if (existingUser) {
-      throw new Error('PHONE_ALREADY_EXISTS'); // handled by error middleware later
+      throw new Error('PHONE_ALREADY_EXISTS');
     }
 
-    // 2. Hash the password — THIS is where hashing belongs
     const passwordHash = await bcrypt.hash(dto.password, SALT_ROUNDS);
 
-    // 3. Persist via repository (repository never sees raw password)
     const user = await this.authRepository.create({
       name: dto.name,
       phone: dto.phone,
       passwordHash,
-      role: dto.role === 'admin' ? 'ADMIN' : 'USER',
+      role: dto.role.toUpperCase() as 'ADMIN' | 'USER',
     });
 
-    // 4. Never return the hash to the caller
+    if (dto.role.toUpperCase() === 'USER') {
+      await this.authRepository.createDomainRole(dto.businessRole?.toUpperCase() as 'LANDLORD' | 'TENANT', user.id);
+    }
+
     return {
       id: user.id,
       name: user.name,
       phone: user.phone,
-      role: user.role,
+      role: dto.businessRole,
     };
   }
 
@@ -54,6 +54,7 @@ export class AuthService {
     const generatedToken = generateToken(user.id);
     return {
       token: generatedToken,
+      expiresIn: 3600, // Token expiration time in seconds
       message: 'Login successful',
     };
   } catch (error) {
