@@ -601,3 +601,110 @@ body {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Signup page: layout uses the shared global design tokens and primitives. */
+.signup-page {
+  display: grid;
+  place-items: center;
+  min-height: 80vh;
+  padding: 24px 0;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 480px;
+  padding: clamp(20px, 4vw, 40px);
+}
+
+.signup-heading {
+  margin-bottom: 28px;
+}
+
+.signup-brand {
+  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.signup-heading .text-body-sm {
+  margin-top: 8px;
+}
+
+.signup-form,
+.signup-fields,
+.signup-result {
+  display: grid;
+  gap: 20px;
+}
+
+.signup-fields {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.signup-field {
+  display: grid;
+  gap: 6px;
+}
+
+.signup-field p,
+.signup-result p {
+  margin: 0;
+}
+
+.signup-password {
+  position: relative;
+}
+
+.signup-password .input-base {
+  padding-right: 72px;
+}
+
+.signup-toggle {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-toggle:focus-visible,
+.signup-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-control);
+}
+
+.signup-error {
+  margin: 0;
+  padding: 12px;
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+  border-radius: var(--radius-control);
+}
+
+.signup-footer {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+.signup-link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.auth-layout {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 24px;
+}
