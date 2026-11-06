@@ -1,16 +1,15 @@
+import 'dotenv/config';
 import express from 'express';
 import routes from './routes/index.js';
 import { prisma } from './shared/database/prisma.service.js';
-import { config } from "dotenv";
-
-config();
 const app = express();
 app.use(express.json());
 app.use(routes);
 
 // 1. Capture the running server instance to close it cleanly
-const server = app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+const port = Number(process.env.PORT || 3001);
+const server = app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 // 2. Uniform Graceful Shutdown Function

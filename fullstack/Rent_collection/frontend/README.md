@@ -2,6 +2,17 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Run the backend with `pnpm dev` from `../backend` and the frontend with `pnpm dev`
+from this directory. The frontend runs on port 3000 and proxies `/api/v1` to the
+backend on port 3001. To use another backend address, copy `.env.example` to
+`.env.local`, set `BACKEND_URL`, and restart Next.js.
+
+Configure the backend `.env` using `../backend/.env.example`, including the
+database connection, JWT secret, and token expiration. Registration at `/signup`
+creates a landlord or tenant account. Accounts require activation under the
+existing backend policy. Login at `/login` stores the returned token in session
+storage and opens `/dashboard` for active accounts.
+
 First, run the development server:
 
 ```bash

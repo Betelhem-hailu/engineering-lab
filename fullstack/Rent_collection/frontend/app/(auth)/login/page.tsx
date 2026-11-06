@@ -15,20 +15,14 @@ export default function LoginPage() {
     if (pending) return;
     setError("");
     const data = new FormData(event.currentTarget);
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
-    if (!apiUrl) {
-      setError("Sign in is not available yet. Please try again later.");
-      return;
-    }
 
     setPending(true);
     try {
       const phone = String(data.get("phone")).trim();
-      const response = await fetch(`${apiUrl}/api/v1/auth/login`, {
+      const response = await fetch("/api/v1/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        // The existing controller calls its phone argument "email".
-        body: JSON.stringify({ email: phone, password: data.get("password") }),
+        body: JSON.stringify({ phone, password: data.get("password") }),
       });
       const result: unknown = await response.json().catch(() => null);
       if (!response.ok) {
@@ -64,7 +58,7 @@ export default function LoginPage() {
           <fieldset className="signup-fields" disabled={pending}>
             <div className="signup-field">
               <label htmlFor="login-phone" className="text-label">Phone number</label>
-              <input id="login-phone" name="phone" type="tel" className="input-base" autoComplete="username" placeholder="+251911234567" required pattern="\+?[1-9][0-9]{10,14}" aria-describedby="login-phone-hint" />
+              <input id="login-phone" name="phone" type="tel" className="input-base" autoComplete="username" placeholder="+251911234567" required pattern="\+[1-9][0-9]{6,14}" aria-describedby="login-phone-hint" />
               <p id="login-phone-hint" className="text-caption">Include your country code, without spaces.</p>
             </div>
             <div className="signup-field">
