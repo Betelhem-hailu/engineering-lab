@@ -2,12 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "dev": "tsx watch --import dotenv/config src/main.ts",
-    "build": "tsc --rootDir src --outDir dist",
-    "start": "node --import dotenv/config dist/main.js",
     "contract:emit": "prisma contract emit"
   },
   "keywords": [],
@@ -30,8 +27,6 @@
     "jsonwebtoken": "^9.0.3"
   },
   "devDependencies": {
-     "tsx": "^4.20.0",
-    "typescript": "^5.9.0",
     "@prisma/cli-engine": "0.2.3",
     "@types/bcrypt": "^6.0.0",
     "@types/express": "^5.0.6",

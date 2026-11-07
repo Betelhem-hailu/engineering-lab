@@ -20,15 +20,23 @@ export default function SignupPage() {
       return;
     }
 
+    // Set the backend origin in NEXT_PUBLIC_API_URL when using a separate API server.
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
+    if (!apiUrl) {
+      setError("Registration is not available yet. Please try again later.");
+      return;
+    }
+
     setPending(true);
     try {
-      const response = await fetch("/api/v1/auth/register", {
+      const response = await fetch(`${apiUrl}/api/v1/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: String(data.get("name")).trim(),
           phone: String(data.get("phone")).trim(),
           password: data.get("password"),
+          role: "user",
           businessRole: data.get("businessRole"),
         }),
       });
@@ -58,8 +66,8 @@ export default function SignupPage() {
 
         {created ? (
           <div className="signup-result" role="status">
-            <h2 className="text-section-title">Account created</h2>
-            <p className="text-body-sm">Your account was created. Please contact support to activate it before signing in.</p>
+            <h2 className="text-section-title">Your account is ready</h2>
+            <p className="text-body-sm">Sign in to get started with DigiRent.</p>
             <Link href="/login" className="button button-primary button-md button-full">Go to sign in</Link>
           </div>
         ) : (
@@ -71,7 +79,7 @@ export default function SignupPage() {
               </div>
               <div className="signup-field">
                 <label htmlFor="signup-phone" className="text-label">Phone number</label>
-                <input id="signup-phone" name="phone" type="tel" className="input-base" autoComplete="tel" placeholder="+251911234567" required pattern="\+[1-9][0-9]{6,14}" aria-describedby="signup-phone-hint" />
+                <input id="signup-phone" name="phone" type="tel" className="input-base" autoComplete="tel" placeholder="+251911234567" required pattern="\+?[1-9][0-9]{10,14}" aria-describedby="signup-phone-hint" />
                 <p id="signup-phone-hint" className="text-caption">Include your country code, without spaces.</p>
               </div>
               <div className="signup-field">
@@ -84,7 +92,7 @@ export default function SignupPage() {
               <div className="signup-field">
                 <label htmlFor="signup-password" className="text-label">Password</label>
                 <div className="signup-password">
-                  <input id="signup-password" name="password" type={showPassword ? "text" : "password"} className="input-base" autoComplete="new-password" required minLength={8} maxLength={72} aria-describedby="signup-password-hint" />
+                  <input id="signup-password" name="password" type={showPassword ? "text" : "password"} className="input-base" autoComplete="new-password" required minLength={8} pattern="(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}" aria-describedby="signup-password-hint" />
                   <button type="button" className="signup-toggle text-primary" aria-controls="signup-password signup-confirm" aria-pressed={showPassword} onClick={() => setShowPassword(!showPassword)}>{showPassword ? "Hide" : "Show"}</button>
                 </div>
                 <p id="signup-password-hint" className="text-caption">Use 8 or more characters with a letter, number, and symbol (!@#$%^&amp;*).</p>

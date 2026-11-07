@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 import { AuthRepository } from './auth.repository.js';
-import { RegisterInput } from './dto/register.dto.js';
+import { RegisterDto } from './dto/register.dto.js';
 import generateToken from './helper/generateToken.js';
 
 const SALT_ROUNDS = 12;
@@ -8,7 +8,7 @@ const SALT_ROUNDS = 12;
 export class AuthService {
   constructor(private authRepository: AuthRepository) {}
 
-  async register(dto: RegisterInput) {
+  async register(dto: RegisterDto) {
     const existingUser = await this.authRepository.findByPhone(dto.phone);
     if (existingUser) {
       throw new Error('PHONE_ALREADY_EXISTS');
@@ -20,10 +20,12 @@ export class AuthService {
       name: dto.name,
       phone: dto.phone,
       passwordHash,
-      role: 'USER',
+      role: dto.role.toUpperCase() as 'ADMIN' | 'USER',
     });
 
-    await this.authRepository.createDomainRole(dto.businessRole, user.id);
+    if (dto.role.toUpperCase() === 'USER') {
+      await this.authRepository.createDomainRole(dto.businessRole?.toUpperCase() as 'LANDLORD' | 'TENANT', user.id);
+    }
 
     return {
       id: user.id,
@@ -56,9 +58,6 @@ export class AuthService {
       message: 'Login successful',
     };
   } catch (error) {
-    if (error instanceof Error && ['INVALID_CREDENTIALS', 'USER_NOT_ACTIVE'].includes(error.message)) {
-      throw error;
-    }
     console.error('Error during login:', error);
     throw new Error('LOGIN_FAILED');
   }

@@ -15,7 +15,7 @@ const generateToken = (payload: string): string => {
     }
 
     try {
-        const token = jwt.sign({ userId: payload }, secret, { expiresIn });
+        const token = jwt.sign(payload, secret, { expiresIn });
         return token;
     } catch (error) {
         console.error('Error generating JWT token:', error);
